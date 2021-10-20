@@ -21,7 +21,7 @@ class MangoSpider(scrapy.Spider):
         yield scrapy.Request(url, callback=self.parse_app, headers=self.headers)
         
     '''
-        Read responce, extract data and save to json file 
+        Read response, extract data and save to json file 
     '''
     def parse_app(self, response):
         raw_data = response.body
